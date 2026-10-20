@@ -1,0 +1,75 @@
+[
+    {
+  "id": "venue-001",
+  "name": "City Center",
+  "latitude": 31.9539,
+  "longitude": 35.9106,
+  "floors": [
+    {
+      "id": "floor-0",
+      "name": "Ground Floor",
+      "level": 0,
+      "places": [
+        {
+          "id": "C-001",
+          "name": "Bean House Cafe",
+          "category": "food",
+          "latitude": 31.9540,
+          "longitude": 35.9107
+        },
+        {
+          "id": "place-002",
+          "name": "City Books",
+          "category": "shops",
+          "latitude": 31.9541,
+          "longitude": 35.9108
+        },
+        {
+          "id": "place-003",
+          "name": "Public Toilets",
+          "category": "toilets",
+          "latitude": 31.9542,
+          "longitude": 35.9109
+        }
+      ]
+    }
+  ]
+}
+,
+    {
+  "id": "venue-001",
+  "name": "City Center",
+  "latitude": 31.9539,
+  "longitude": 35.9106,
+  "floors": [
+    {
+      "id": "floor-0",
+      "name": "Ground Floor",
+      "level": 0,
+      "places": [
+        {
+          "id": "C-001",
+          "name": "Bean House Cafe",
+          "category": "food",
+          "latitude": 31.9540,
+          "longitude": 35.9107
+        },
+        {
+          "id": "place-002",
+          "name": "City Books",
+          "category": "shops",
+          "latitude": 31.9541,
+          "longitude": 35.9108
+        },
+        {
+          "id": "place-003",
+          "name": "Public Toilets",
+          "category": "toilets",
+          "latitude": 31.9542,
+          "longitude": 35.9109
+        }
+      ]
+    }
+  ]
+}
+]
