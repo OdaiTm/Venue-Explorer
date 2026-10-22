@@ -35,15 +35,6 @@ struct ContentView: View {
 }
 
 
-
-
-
-
-
-
-
-
-
 func printD(d : [Venue] , name : String , floor : String ) {
     
     
@@ -51,7 +42,9 @@ func printD(d : [Venue] , name : String , floor : String ) {
         
     }
     print("///////////////////////////////")
-    print(searchResult)
+    print("the search result:\(searchResult?.name)")
+    
+    
     print("///////////////////////////////")
 
     let floormembers = d.map{
@@ -61,18 +54,33 @@ func printD(d : [Venue] , name : String , floor : String ) {
     }
     
     print("///////////////////////////////")
-    print(floormembers)
+    print("the floor members:")
+    floormembers.forEach{ f in
+        
+        if f.last != nil {
+            print(f.last?
+                .places.first?.name)
+        }
+        
+    }
+
+    print("///////////////////////////////")
+    
+    
+    
+    var sortedD =  d.sorted(by: {(v1 , v2) in v1.distance < v2.distance})
+    
     print("///////////////////////////////")
 
     
+    sortedD.forEach{
+        s in print(s.name , "with distance: ",s.distance ,"long , la: ",s.longitude
+        
+                   , s.latitude
+        
+        )
+    }
     
-    
-    
-    var sortedD =  d.sorted(by: {(v1 , v2) in v1.distance > v2.distance})
-    
-    print("///////////////////////////////")
-
-    print(sortedD)
     
     print("///////////////////////////////")
 
@@ -99,6 +107,8 @@ func readJSON () async throws -> [Venue]{
         var data = try await URLSession.shared.data(from:url )
         
         var decoder = JSONDecoder()
+        
+    try    JSONDecoder().decode([Venue].self, from: data.0)
         
         Venues  =  try decoder.decode([Venue].self, from: data.0)
  
