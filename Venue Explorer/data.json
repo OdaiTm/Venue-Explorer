@@ -1,75 +1,505 @@
 [
-    {
-  "id": "venue-001",
-  "name": "City Center",
-  "latitude": 31.9539,
-  "longitude": 35.9106,
-  "floors": [
-    {
-      "id": "floor-0",
-      "name": "Ground Floor",
-      "level": 0,
-      "places": [
-        {
-          "id": "C-001",
-          "name": "Bean House Cafe",
-          "category": "food",
-          "latitude": 31.9540,
-          "longitude": 35.9107
-        },
-        {
-          "id": "place-002",
-          "name": "City Books",
-          "category": "shops",
-          "latitude": 31.9541,
-          "longitude": 35.9108
-        },
-        {
-          "id": "place-003",
-          "name": "Public Toilets",
-          "category": "toilets",
-          "latitude": 31.9542,
-          "longitude": 35.9109
-        }
-      ]
-    }
-  ]
-}
-,
-    {
-  "id": "venue-001",
-  "name": "City Center",
-  "latitude": 31.9539,
-  "longitude": 35.9106,
-  "floors": [
-    {
-      "id": "floor-0",
-      "name": "Ground Floor",
-      "level": 0,
-      "places": [
-        {
-          "id": "C-001",
-          "name": "Bean House Cafe",
-          "category": "food",
-          "latitude": 31.9540,
-          "longitude": 35.9107
-        },
-        {
-          "id": "place-002",
-          "name": "City Books",
-          "category": "shops",
-          "latitude": 31.9541,
-          "longitude": 35.9108
-        },
-        {
-          "id": "place-003",
-          "name": "Public Toilets",
-          "category": "toilets",
-          "latitude": 31.9542,
-          "longitude": 35.9109
-        }
-      ]
-    }
-  ]
-}
+  {
+    "id": "venue-001",
+    "name": "City Center",
+    "latitude": 31.9539,
+    "longitude": 35.9106,
+    "floors": [
+      {
+        "id": "floor-0",
+        "name": "Ground Floor",
+        "level": 0,
+        "places": [
+          {
+            "id": "C-001",
+            "name": "Bean House Cafe",
+            "category": "food",
+            "latitude": 31.9540,
+            "longitude": 35.9107
+          },
+          {
+            "id": "place-002",
+            "name": "City Books",
+            "category": "shops",
+            "latitude": 31.9541,
+            "longitude": 35.9108
+          },
+          {
+            "id": "place-003",
+            "name": "Public Toilets",
+            "category": "toilets",
+            "latitude": 31.9542,
+            "longitude": 35.9109
+          }
+        ]
+      },
+      {
+        "id": "floor-1",
+        "name": "First Floor",
+        "level": 1,
+        "places": [
+          {
+            "id": "place-004",
+            "name": "Fashion Hub",
+            "category": "shops",
+            "latitude": 31.9543,
+            "longitude": 35.9110
+          },
+          {
+            "id": "place-005",
+            "name": "Burger Joint",
+            "category": "food",
+            "latitude": 31.9544,
+            "longitude": 35.9111
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "venue-002",
+    "name": "Grand Mall",
+    "latitude": 31.9631,
+    "longitude": 35.9302,
+    "floors": [
+      {
+        "id": "floor-b1",
+        "name": "Basement 1",
+        "level": -1,
+        "places": [
+          {
+            "id": "place-006",
+            "name": "Hypermarket",
+            "category": "shops",
+            "latitude": 31.9632,
+            "longitude": 35.9303
+          }
+        ]
+      },
+      {
+        "id": "floor-0",
+        "name": "Ground Floor",
+        "level": 0,
+        "places": [
+          {
+            "id": "place-007",
+            "name": "Star Brews",
+            "category": "food",
+            "latitude": 31.9634,
+            "longitude": 35.9305
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "venue-003",
+    "name": "Galleria Plaza",
+    "latitude": 31.9820,
+    "longitude": 35.8920,
+    "floors": [
+      {
+        "id": "floor-0",
+        "name": "Ground Floor",
+        "level": 0,
+        "places": [
+          {
+            "id": "place-008",
+            "name": "Art Gallery",
+            "category": "entertainment",
+            "latitude": 31.9821,
+            "longitude": 35.8921
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "venue-004",
+    "name": "Sunset Tower",
+    "latitude": 32.0125,
+    "longitude": 35.8541,
+    "floors": [
+      {
+        "id": "floor-0",
+        "name": "Lobby",
+        "level": 0,
+        "places": [
+          {
+            "id": "place-009",
+            "name": "Concierge Cafe",
+            "category": "food",
+            "latitude": 32.0126,
+            "longitude": 35.8542
+          }
+        ]
+      },
+      {
+        "id": "floor-10",
+        "name": "Sky Deck",
+        "level": 10,
+        "places": [
+          {
+            "id": "place-010",
+            "name": "Observation Bar",
+            "category": "entertainment",
+            "latitude": 32.0127,
+            "longitude": 35.8543
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "venue-005",
+    "name": "Marina Heights",
+    "latitude": 31.9214,
+    "longitude": 35.9423,
+    "floors": [
+      {
+        "id": "floor-0",
+        "name": "Main Concourse",
+        "level": 0,
+        "places": [
+          {
+            "id": "place-011",
+            "name": "Seafood Grill",
+            "category": "food",
+            "latitude": 31.9215,
+            "longitude": 35.9424
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "venue-006",
+    "name": "Summit Arcade",
+    "latitude": 32.0541,
+    "longitude": 35.7982,
+    "floors": [
+      {
+        "id": "floor-0",
+        "name": "Level 1",
+        "level": 0,
+        "places": [
+          {
+            "id": "place-012",
+            "name": "Mountain Gear",
+            "category": "shops",
+            "latitude": 32.0542,
+            "longitude": 35.7983
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "venue-007",
+    "name": "Oasis Square",
+    "latitude": 31.8962,
+    "longitude": 35.9674,
+    "floors": [
+      {
+        "id": "floor-0",
+        "name": "Plaza Floor",
+        "level": 0,
+        "places": [
+          {
+            "id": "place-013",
+            "name": "Date Palm Cafe",
+            "category": "food",
+            "latitude": 31.8963,
+            "longitude": 35.9675
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "venue-008",
+    "name": "Nova Station",
+    "latitude": 32.1034,
+    "longitude": 35.8123,
+    "floors": [
+      {
+        "id": "floor-0",
+        "name": "Concourse",
+        "level": 0,
+        "places": [
+          {
+            "id": "place-014",
+            "name": "Quick Mart",
+            "category": "shops",
+            "latitude": 32.1035,
+            "longitude": 35.8124
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "venue-009",
+    "name": "Canyon Mall",
+    "latitude": 31.8751,
+    "longitude": 35.8349,
+    "floors": [
+      {
+        "id": "floor-0",
+        "name": "Ground Floor",
+        "level": 0,
+        "places": [
+          {
+            "id": "place-015",
+            "name": "Canyon Books",
+            "category": "shops",
+            "latitude": 31.8752,
+            "longitude": 35.8350
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "venue-010",
+    "name": "Pine Crest Center",
+    "latitude": 32.0489,
+    "longitude": 35.9218,
+    "floors": [
+      {
+        "id": "floor-0",
+        "name": "Main Floor",
+        "level": 0,
+        "places": [
+          {
+            "id": "place-016",
+            "name": "Pine Bakery",
+            "category": "food",
+            "latitude": 32.0490,
+            "longitude": 35.9219
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "venue-011",
+    "name": "Valley View Complex",
+    "latitude": 31.9123,
+    "longitude": 35.8012,
+    "floors": [
+      {
+        "id": "floor-0",
+        "name": "Entry Level",
+        "level": 0,
+        "places": [
+          {
+            "id": "place-017",
+            "name": "Valley Grocers",
+            "category": "shops",
+            "latitude": 31.9124,
+            "longitude": 35.8013
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "venue-012",
+    "name": "Horizon Hub",
+    "latitude": 32.0891,
+    "longitude": 35.9456,
+    "floors": [
+      {
+        "id": "floor-0",
+        "name": "Ground Level",
+        "level": 0,
+        "places": [
+          {
+            "id": "place-018",
+            "name": "Horizon Cafe",
+            "category": "food",
+            "latitude": 32.0892,
+            "longitude": 35.9457
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "venue-013",
+    "name": "Atlas Pavilion",
+    "latitude": 31.8642,
+    "longitude": 35.9012,
+    "floors": [
+      {
+        "id": "floor-0",
+        "name": "Ground Floor",
+        "level": 0,
+        "places": [
+          {
+            "id": "place-019",
+            "name": "Atlas Gifts",
+            "category": "shops",
+            "latitude": 31.8643,
+            "longitude": 35.9013
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "venue-014",
+    "name": "Metro Center",
+    "latitude": 32.0234,
+    "longitude": 35.8789,
+    "floors": [
+      {
+        "id": "floor-0",
+        "name": "Concourse",
+        "level": 0,
+        "places": [
+          {
+            "id": "place-020",
+            "name": "Metro Express",
+            "category": "food",
+            "latitude": 32.0235,
+            "longitude": 35.8790
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "venue-015",
+    "name": "Beacon Plaza",
+    "latitude": 31.9456,
+    "longitude": 35.7891,
+    "floors": [
+      {
+        "id": "floor-0",
+        "name": "Ground Level",
+        "level": 0,
+        "places": [
+          {
+            "id": "place-021",
+            "name": "Beacon Electronics",
+            "category": "shops",
+            "latitude": 31.9457,
+            "longitude": 35.7892
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "venue-016",
+    "name": "Zenith Galleria",
+    "latitude": 32.0782,
+    "longitude": 35.8341,
+    "floors": [
+      {
+        "id": "floor-0",
+        "name": "Main Floor",
+        "level": 0,
+        "places": [
+          {
+            "id": "place-022",
+            "name": "Zenith Teahouse",
+            "category": "food",
+            "latitude": 32.0783,
+            "longitude": 35.8342
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "venue-017",
+    "name": "Amber Marketplace",
+    "latitude": 31.8891,
+    "longitude": 35.9451,
+    "floors": [
+      {
+        "id": "floor-0",
+        "name": "Level 0",
+        "level": 0,
+        "places": [
+          {
+            "id": "place-023",
+            "name": "Amber Spices",
+            "category": "shops",
+            "latitude": 31.8892,
+            "longitude": 35.9452
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "venue-018",
+    "name": "Vanguard Tower",
+    "latitude": 32.0012,
+    "longitude": 35.9678,
+    "floors": [
+      {
+        "id": "floor-0",
+        "name": "Lobby",
+        "level": 0,
+        "places": [
+          {
+            "id": "place-024",
+            "name": "Vanguard Deli",
+            "category": "food",
+            "latitude": 32.0013,
+            "longitude": 35.9679
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "venue-019",
+    "name": "Pioneer Complex",
+    "latitude": 31.9345,
+    "longitude": 35.8192,
+    "floors": [
+      {
+        "id": "floor-0",
+        "name": "Ground Floor",
+        "level": 0,
+        "places": [
+          {
+            "id": "place-025",
+            "name": "Pioneer Stationery",
+            "category": "shops",
+            "latitude": 31.9346,
+            "longitude": 35.8193
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "venue-020",
+    "name": "Crown Atrium",
+    "latitude": 32.0678,
+    "longitude": 35.9014,
+    "floors": [
+      {
+        "id": "floor-0",
+        "name": "Atrium Floor",
+        "level": 0,
+        "places": [
+          {
+            "id": "place-026",
+            "name": "Crown Patisserie",
+            "category": "food",
+            "latitude": 32.0679,
+            "longitude": 35.9015
+          }
+        ]
+      }
+    ]
+  }
 ]
