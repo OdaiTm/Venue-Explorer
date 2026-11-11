@@ -10,18 +10,6 @@ import SwiftUI
 struct LIstViewItem: View {
     let title : String
     
-    
-    let color = UIColor { traitCollection in
-        switch traitCollection.userInterfaceStyle {
-        case .dark:
-            return .white
-        default:
-            return .black
-        }
-    }
-    
-    
-    
     var body: some View {
         VStack(alignment: .center,spacing: 0){
 
@@ -33,7 +21,7 @@ struct LIstViewItem: View {
                     .leading).padding()
                 .foregroundStyle(.primary)
             
-//            Divider().background(.secondary)
+            Divider().background(.secondary)
         }
     }
 }
@@ -41,4 +29,3 @@ struct LIstViewItem: View {
 #Preview {
     LIstViewItem(title: "item").preferredColorScheme(.light)
 }
-
