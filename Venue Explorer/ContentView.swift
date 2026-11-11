@@ -3,64 +3,37 @@ import Playgrounds
 
 struct ContentView: View {
     
-    @State var d : [Venue] = []
+    @Environment(DataModel.self) var dataSet
+    @EnvironmentObject var dataFromAPI : APIData
+    @State var headLine : String = "Venus"
+    let head = "Favorite Places"
+    let head1 = "Venus"
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-        
-        Button("read the JSON"){
-            
-            var t = Task {
-                do{
-                    d =   try await readJSON()
-                    print(d)
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                }catch
-                    ReadErrors.ReadError {
-                    
-                    print(ReadErrors.ReadError)
+       
+            TabView{
+                Tab("", systemImage: "location.fill"){
+                    NavigationStack{  CustomListView(headLine: head1, venus: dataFromAPI.Venus, nextList: 1)}
                 }
+                
+                Tab("", systemImage: "star.fill"){
+                    NavigationStack{  CustomListView(headLine: head, places: dataFromAPI.favorite, nextList: 3)}
+                }
+                
+                
+            }.task {
+                
+                do {
+                  try await  dataFromAPI.getData(urlLink: "https://raw.githubusercontent.com/OdaiTm/Venue-Explorer/refs/heads/readJSON/Venue%20Explorer/data.json")
+                   
+                }catch {
+                    
+                }
+                
+                
+                
             }
+            
+        
+                    
+                }
         }
-    }
-}
-
-
-
-func readJSON () async throws -> [Venue]{
-    var url = URL(filePath: "/Users/odaitmrawe/Documents/Venue Explorer/Venue Explorer/data.json")
-    
-    var Venues : [Venue] = []
-    
-    do{
-        var data = try await URLSession.shared.data(from:url )
-        
-        var decoder = JSONDecoder()
-        
-        Venues  =  try decoder.decode([Venue].self, from: data.0)
- 
-    }catch{
-        
-        throw ReadErrors.ReadError
-        
-    }
-   
-    
-    return Venues
-    
-}
-
-
-
-
-
-enum ReadErrors : Error {
-    case ReadError
-}
