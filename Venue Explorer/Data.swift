@@ -13,20 +13,48 @@ class DataModel {
   
     
     var Venus : [Venue]
-    
+    var favorite : [Place]
     init() {
-        self.Venus = readJSON() ?? []
+        self.Venus =  []
+        self.favorite = []
     }
+    
+    
     
 }
 
 
+func readJSON() -> [Venue]? {
 
-    func readJSON () -> [Venue]?{
-        let url = URL(filePath: "/Users/odaitmrawe/Documents/Venue Explorer/Venue Explorer/data.json")
+    guard let url = Bundle.main.url(
+        forResource: "data",
+        withExtension: "json"
+    ) else {
+        print("JSON file not found")
+        return nil
+    }
+
+    do {
+        let data = try Data(contentsOf: url)
+
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
-        var dataSet = try? decoder.decode([Venue].self, from: Data(contentsOf: url))
+
+        let dataSet = try decoder.decode([Venue].self, from: data)
+
         return dataSet
-        
+
+    } catch {
+        print("JSON decoding error: \(error)")
+        return nil
     }
+}
+
+//    func readJSON () -> [Venue]?{
+//        let url = URL(filePath: "data.json")
+//        let decoder = JSONDecoder()
+//        decoder.dateDecodingStrategy = .iso8601
+//        let dataSet = try? decoder.decode([Venue].self, from: Data(contentsOf: url))
+//        return dataSet
+//        
+//    }

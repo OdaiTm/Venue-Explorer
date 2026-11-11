@@ -18,8 +18,7 @@ struct MapView: View {
                 center: CLLocationCoordinate2D(latitude: lat, longitude: long),
                 span: MKCoordinateSpan(
                     latitudeDelta: 0.01,
-                    longitudeDelta: 0.01
-    
+                    longitudeDelta: 0.01    
                 )
                 
             )
