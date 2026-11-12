@@ -3,64 +3,47 @@ import Playgrounds
 
 struct ContentView: View {
     
-    @State var d : [Venue] = []
+    @EnvironmentObject var dataFromAPI : APIData
+    
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var favoritesDC : FetchedResults<PlaceDC>
+    
+    
+    @State var headLine : String = "Venus"
+    let head = "Favorite Places"
+    let head1 = "Venus"
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-        
-        Button("read the JSON"){
-            
-            var t = Task {
-                do{
-                    d =   try await readJSON()
-                    print(d)
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                }catch
-                    ReadErrors.ReadError {
-                    
-                    print(ReadErrors.ReadError)
+       
+            TabView{
+                Tab("", systemImage: "location.fill"){
+                    NavigationStack{  CustomListView(headLine: head1, venus: dataFromAPI.Venus, nextList: 1)}
                 }
+                
+                Tab("", systemImage: "star.fill"){
+                    NavigationStack{  CustomListView(headLine: head, places: dataFromAPI.favorite, nextList: 3)}
+                }
+                
+                
+            }.task {
+                
+                do {
+                  try await  dataFromAPI.getData(urlLink: "https://raw.githubusercontent.com/OdaiTm/Venue-Explorer/refs/heads/readJSON/Venue%20Explorer/data.json")
+                   
+                    for f in favoritesDC {
+                        dataFromAPI.favorite.append(Place(id: f.id ?? "", name: f.name ?? "" , category: f.category ?? "" , latitude: f.latitude ?? 0.0, longitude: f.longitude ?? 0.0))
+                    }
+                    
+                    
+                    
+                }catch {
+                    
+                }
+                
+                
+                
             }
+            
+        
+                    
+                }
         }
-    }
-}
-
-
-
-func readJSON () async throws -> [Venue]{
-    var url = URL(filePath: "/Users/odaitmrawe/Documents/Venue Explorer/Venue Explorer/data.json")
-    
-    var Venues : [Venue] = []
-    
-    do{
-        var data = try await URLSession.shared.data(from:url )
-        
-        var decoder = JSONDecoder()
-        
-        Venues  =  try decoder.decode([Venue].self, from: data.0)
- 
-    }catch{
-        
-        throw ReadErrors.ReadError
-        
-    }
-   
-    
-    return Venues
-    
-}
-
-
-
-
-
-enum ReadErrors : Error {
-    case ReadError
-}
