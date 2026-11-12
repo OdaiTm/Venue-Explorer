@@ -13,7 +13,7 @@ import Combine
 class DataController: ObservableObject {
 
 
-    let container = NSPersistentContainer(name: "Bookworm")
+    let container = NSPersistentContainer(name: "FavoriteDC")
 
     init() {
         container.loadPersistentStores { description, error in

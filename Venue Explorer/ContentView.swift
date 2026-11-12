@@ -3,8 +3,12 @@ import Playgrounds
 
 struct ContentView: View {
     
-    @Environment(DataModel.self) var dataSet
     @EnvironmentObject var dataFromAPI : APIData
+    
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var favoritesDC : FetchedResults<PlaceDC>
+    
+    
     @State var headLine : String = "Venus"
     let head = "Favorite Places"
     let head1 = "Venus"
@@ -25,6 +29,12 @@ struct ContentView: View {
                 do {
                   try await  dataFromAPI.getData(urlLink: "https://raw.githubusercontent.com/OdaiTm/Venue-Explorer/refs/heads/readJSON/Venue%20Explorer/data.json")
                    
+                    for f in favoritesDC {
+                        dataFromAPI.favorite.append(Place(id: f.id ?? "", name: f.name ?? "" , category: f.category ?? "" , latitude: f.latitude ?? 0.0, longitude: f.longitude ?? 0.0))
+                    }
+                    
+                    
+                    
                 }catch {
                     
                 }

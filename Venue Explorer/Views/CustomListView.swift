@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+public import CoreData
 
 
 enum SortState : String{
@@ -25,7 +26,9 @@ struct CustomListView: View {
       var floors     : [Floor] = []
     var nextList : Int
     @State var sortState : SortState = .unsorted
-    
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var favoritesDC : FetchedResults<PlaceDC>
+
     init(headLine: String , venus: [Venue]  = [], places: [Place]  = [], floors: [Floor]  = [] , nextList : Int) {
         self.headLine = headLine
         self.venus = venus
@@ -201,8 +204,10 @@ struct CustomListView: View {
                                             $0.id == place.id
                                         }) {
                                             data.favorite.remove(at: index)
+                                            removePlaceOf(id : place.id)
                                         } else {
                                             data.favorite.append(place)
+                                            addToFavorite(place: place)
                                         }
 
                                     } label: {
@@ -231,6 +236,39 @@ struct CustomListView: View {
 }
     
     
+extension CustomListView {
+    
+    func addToFavorite(place :Place) {
+        let newFavorite = PlaceDC(context : moc)
+        newFavorite.id = place.id
+        newFavorite.category = place.category
+        newFavorite.latitude = place.latitude
+        newFavorite.longitude = place.longitude
+        newFavorite.name = place.name
+        try? moc.save()
+        
+    }
+    
+    
+    func removePlaceOf(id : String) {
+        for p in favoritesDC {
+            if(p.id == id ) {
+                moc.delete(p)
+                break
+            }
+        }
+        try? moc.save()
+       
+        
+        
+    }
+    
+    
+    
+}
+
+
+
 
 
 #Preview {

@@ -11,15 +11,7 @@ struct LIstViewItem: View {
     let title : String
     
     
-    let color = UIColor { traitCollection in
-        switch traitCollection.userInterfaceStyle {
-        case .dark:
-            return .white
-        default:
-            return .black
-        }
-    }
-    
+ 
     
     
     var body: some View {
