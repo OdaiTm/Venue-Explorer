@@ -4,6 +4,12 @@
     "" : {
 
     },
+    "%@" : {
+
+    },
+    "%@ " : {
+
+    },
     "A to Z" : {
       "localizations" : {
         "ar" : {
@@ -104,6 +110,9 @@
           }
         }
       }
+    },
+    "the %@ tab " : {
+
     },
     "Unsorted" : {
       "localizations" : {

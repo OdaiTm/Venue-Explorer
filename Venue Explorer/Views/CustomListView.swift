@@ -183,7 +183,8 @@ struct CustomListView: View {
                         }
                         label: {
                             LIstViewItem(title: venue.name)
-                        }.foregroundStyle(.primary)
+                        }.foregroundStyle(.primary).accessibilityLabel(headLine)
+                            .accessibilityHint("\(venue.name) ")
                     
                 }.navigationTitle(headLine)
                 
@@ -197,7 +198,8 @@ struct CustomListView: View {
                         }
                         label: {
                             LIstViewItem(title: floor.name)
-                        }.foregroundStyle(.primary)
+                        }.foregroundStyle(.primary).foregroundStyle(.primary).accessibilityLabel(headLine)
+                            .accessibilityHint("the \(floor.name) tab ")
                     }.navigationTitle(headLine)
                     
                 }
@@ -235,7 +237,8 @@ struct CustomListView: View {
                                     }
                                     .buttonStyle(.plain)
 
-                                })
+                                }).foregroundStyle(.primary).accessibilityLabel(headLine)
+                                .accessibilityHint("\(place.name)")
                         }.foregroundStyle(.primary)
                     }
                     

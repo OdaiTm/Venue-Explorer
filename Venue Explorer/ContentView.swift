@@ -22,11 +22,13 @@ struct ContentView: View {
             TabView{
                 Tab("", systemImage: "location.fill"){
                     NavigationStack{  CustomListView(headLine: head1, venus: dataFromAPI.Venus, nextList: 1)}
-                }
+                }.accessibilityLabel(head1)
+                    .accessibilityHint("the \(head1) tab ")
                 
                 Tab("", systemImage: "star.fill"){
                     NavigationStack{  CustomListView(headLine: head, places: dataFromAPI.favorite, nextList: 3)}
-                }
+                }.accessibilityLabel(head)
+                    .accessibilityHint("the \(head) tab ")
              
                 
             }.task {
