@@ -28,7 +28,7 @@ struct CustomListView: View {
     @State var sortState : SortState = .unsorted
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: []) var favoritesDC : FetchedResults<PlaceDC>
-
+    @State var menuTitle = String(localized: "Unsorted")
     init(headLine: String , venus: [Venue]  = [], places: [Place]  = [], floors: [Floor]  = [] , nextList : Int) {
         self.headLine = headLine
         self.venus = venus
@@ -137,23 +137,38 @@ struct CustomListView: View {
         
         
         VStack{
-            Menu(sortState.rawValue){
-                Button("Unsorted"){
+            Menu(menuTitle){
+                Button(String(localized: "Unsorted")){
                     sortState = .unsorted
+                    menuTitle = String(
+                        localized: String.LocalizationValue(sortState.rawValue)
+                    )
+                    
                 }
                 
-                Button("distance H2L"){
+                Button(String(localized:"distance H2L")){
                     sortState = .distanceHtoL
-              
+                    menuTitle = String(
+                        localized: String.LocalizationValue(sortState.rawValue)
+                    )
                 }
-                Button("distance L2H"){
+                Button(String(localized:"distance L2H")){
                     sortState = .distanceLtoH
+                    menuTitle = String(
+                        localized: String.LocalizationValue(sortState.rawValue)
+                    )
               }
-                Button("A to Z"){
+                Button(String(localized:"A to Z")){
                     sortState = .AtoZ
+                    menuTitle = String(
+                        localized: String.LocalizationValue(sortState.rawValue)
+                    )
              }
-                Button("Z to A"){
+                Button(String(localized:"Z to A")){
                     sortState = .ZtoA
+                    menuTitle = String(
+                        localized: String.LocalizationValue(sortState.rawValue)
+                    )
             }
             }.foregroundStyle(.primary).frame(maxWidth: .infinity , alignment: .trailing).padding(.trailing,10)
             List(){
@@ -164,7 +179,7 @@ struct CustomListView: View {
                         venue in
                         NavigationLink{
                             
-                            CustomListView(headLine: "Floors", floors: venue.floors, nextList: 2)
+                            CustomListView(headLine: String(localized: "floorsNavTitle"), floors: venue.floors, nextList: 2)
                         }
                         label: {
                             LIstViewItem(title: venue.name)
@@ -178,7 +193,7 @@ struct CustomListView: View {
                     ForEach(searchResult2,id: \.id) {
                         floor in
                         NavigationLink{
-                            CustomListView(headLine: "Place", places: floor.places, nextList: 3)
+                            CustomListView(headLine: String(localized: "placesNavTitle"), places: floor.places, nextList: 3)
                         }
                         label: {
                             LIstViewItem(title: floor.name)

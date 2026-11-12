@@ -9,9 +9,14 @@ struct ContentView: View {
     @FetchRequest(sortDescriptors: []) var favoritesDC : FetchedResults<PlaceDC>
     
     
-    @State var headLine : String = "Venus"
-    let head = "Favorite Places"
-    let head1 = "Venus"
+    @State private var headLine = String(
+        localized: "venusNavTitle"
+    )
+
+    let head = String(localized: "favoritePlaces")
+
+    let head1 = String(localized: "venusNavTitle")
+    
     var body: some View {
        
             TabView{
@@ -22,7 +27,7 @@ struct ContentView: View {
                 Tab("", systemImage: "star.fill"){
                     NavigationStack{  CustomListView(headLine: head, places: dataFromAPI.favorite, nextList: 3)}
                 }
-                
+             
                 
             }.task {
                 

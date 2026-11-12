@@ -1,7 +1,148 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
 
+    },
+    "A to Z" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آ ل ي"
+          }
+        }
+      }
+    },
+    "distance H2L" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المسافه تنازلي"
+          }
+        }
+      }
+    },
+    "distance L2H" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المسافه تصاعدي"
+          }
+        }
+      }
+    },
+    "favoritePlaces" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الآماكن المفضله"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favorite Places"
+          }
+        }
+      }
+    },
+    "floorsNavTitle" : {
+      "comment" : "Navigation title of the navigation Floors tab",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الطوابق"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Floors"
+          }
+        }
+      }
+    },
+    "placesNavTitle" : {
+      "comment" : "places Navigation Title",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الآماكن"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Places"
+          }
+        }
+      }
+    },
+    "searchPlaceHolder" : {
+      "comment" : "search Place Holder",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بحث"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search"
+          }
+        }
+      }
+    },
+    "Unsorted" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "غير مرتب"
+          }
+        }
+      }
+    },
+    "venusNavTitle" : {
+      "comment" : "Navigation title of the navigation Venus tab",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "العقارات"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Venus"
+          }
+        }
+      }
+    },
+    "Z to A" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ي ل آ"
+          }
+        }
+      }
+    }
   },
   "version" : "1.3"
 }
