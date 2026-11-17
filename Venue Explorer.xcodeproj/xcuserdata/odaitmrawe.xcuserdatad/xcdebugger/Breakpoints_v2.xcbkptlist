@@ -88,7 +88,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9C1DF4CA-244B-4BFA-8A64-B0A454A939DC"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Venue Explorer/Views/CustomListView.swift"
@@ -120,7 +120,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "23F338B6-BD5B-44C7-9A5E-C9AD37606BE1"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Venue Explorer/Views/CustomListView.swift"
@@ -184,7 +184,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "95F770DF-C685-4377-A6A4-06DD86575817"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             condition = "if headLine == &quot;Favorite Places&quot;"
             ignoreCount = "0"
             continueAfterRunningActions = "No"

@@ -27,13 +27,14 @@ class LocationManager :  NSObject , ObservableObject {
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest // this thing will select how accurayte is your application
         //high usage of power hehe
+        requestPermission()
     }
     
     
     func requestPermission() {
         manager.requestWhenInUseAuthorization()
-        manager.startUpdatingLocation()
-//        manager.requestLocation()
+//        manager.startUpdatingLocation()
+        manager.requestLocation()
     }
     
 }

@@ -210,7 +210,7 @@ struct CustomListView: View {
                         place in
                         NavigationLink{
                             
-                            MapView(lat: Double(place.latitude), long: Double(place.longitude) , placeName: place.name)
+                            MapView(lat: Double(place.latitude), long: Double(place.longitude) , placeName: place.name).ignoresSafeArea()
                         }
                         label: {
                             LIstViewItem(title: place.name)
