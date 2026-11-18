@@ -1,3 +1,4 @@
+
 //
 //  MapView.swift
 //  Venue Explorer
@@ -6,36 +7,44 @@
 //
 
 import SwiftUI
-import MapKit
+import MapboxMaps
 struct MapView: View {
     let lat : Double
     let long : Double
     let placeName : String
+
     var body: some View {
+        let manager : LocationManager = LocationManager()
         
-        Map(initialPosition: .region(
-            MKCoordinateRegion(
-                center: CLLocationCoordinate2D(latitude: lat, longitude: long),
-                span: MKCoordinateSpan(
-                    latitudeDelta: 0.01,
-                    longitudeDelta: 0.01    
-                )
-                
-            )
+      var  myLocation = CLLocationCoordinate2D(
+            latitude: (manager.location?.coordinate.latitude) ?? 30.1 ,
+            longitude: (manager.location?.coordinate.longitude) ?? 30.3
         )
-        ,content: {
-            Marker(placeName                   ,
-                   coordinate: CLLocationCoordinate2D(
-                    latitude: lat,
-                    longitude: long
-                )
+        
+        let thePlaceLocation = CLLocationCoordinate2D(
+            latitude: lat,
+            longitude: long
+        )
+        
+        Map(initialViewport: .camera(center :  thePlaceLocation, zoom: 15 , bearing: 45 , pitch: 45)){
+            
+            PointAnnotation(
+                coordinate: myLocation
+            ).image(PointAnnotation.Image(image: UIImage(systemName: "figure.wave")!, name: "figure.wave"))
+            
+            PointAnnotation(coordinate: thePlaceLocation).image(PointAnnotation.Image(image: UIImage(systemName: "figure.wave")!, name: "figure.wave"))
             
             
-            )
+            PolylineAnnotation(lineCoordinates: [myLocation ,thePlaceLocation ])
             
         }
-        
-        )
+            
+             
+            
+            
+            .task {
+            
+        }.ignoresSafeArea()
         
         
     }
