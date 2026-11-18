@@ -6,8 +6,15 @@
 	objectVersion = 90;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		913A9F3830A5C1B300B1FF3E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 913A9F3730A5C1B300B1FF3E /* Localizable.xcstrings */; };
+		91ECF49C30AD86340032C5CD /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 91ECF49B30AD86340032C5CD /* MapboxMaps */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		000000000000000000000120 /* Venue Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Venue Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		913A9F3730A5C1B300B1FF3E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		91ECF4A930AD87750032C5CD /* Venue-Explorer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Venue-Explorer-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -22,6 +29,7 @@
 		000000000000000130000000 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				91ECF49C30AD86340032C5CD /* MapboxMaps in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
@@ -30,6 +38,8 @@
 		000000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
+				91ECF4A930AD87750032C5CD /* Venue-Explorer-Info.plist */,
+				913A9F3730A5C1B300B1FF3E /* Localizable.xcstrings */,
 				000000000000000000000010 /* Venue Explorer */,
 				000000000000000000000020 /* Products */,
 			);
@@ -60,6 +70,9 @@
 				000000000000000000000010 /* Venue Explorer */,
 			);
 			name = "Venue Explorer";
+			packageProductDependencies = (
+				91ECF49B30AD86340032C5CD /* MapboxMaps */,
+			);
 			productName = MyApp;
 			productReference = 000000000000000000000120 /* Venue Explorer.app */;
 			productType = "com.apple.product-type.application";
@@ -85,9 +98,13 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 000000000000000000000001;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				91ECF49A30AD86340032C5CD /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
+			);
 			preferredProjectObjectVersion = 90;
 			productRefGroup = 000000000000000000000020 /* Products */;
 			projectDirPath = "";
@@ -102,6 +119,7 @@
 		000000000000000140000000 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				913A9F3830A5C1B300B1FF3E /* Localizable.xcstrings in Resources */,
 			);
 		};
 /* End PBXResourcesBuildPhase section */
@@ -178,6 +196,7 @@
 				PROJECT_UNIQUE_VALUE = H1F9B2LO;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TVOS_DEPLOYMENT_TARGET = 27.0;
 				WATCHOS_DEPLOYMENT_TARGET = 27.0;
@@ -241,6 +260,7 @@
 				PROJECT_UNIQUE_VALUE = H1F9B2LO;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				TVOS_DEPLOYMENT_TARGET = 27.0;
 				WATCHOS_DEPLOYMENT_TARGET = 27.0;
 				XROS_DEPLOYMENT_TARGET = 27.0;
@@ -257,6 +277,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Venue-Explorer-Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "this app will use your location";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -295,6 +317,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Venue-Explorer-Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "this app will use your location";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -343,6 +367,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		91ECF49A30AD86340032C5CD /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.35.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		91ECF49B30AD86340032C5CD /* MapboxMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91ECF49A30AD86340032C5CD /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
+			productName = MapboxMaps;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 000000000000000000000000 /* Project object */;
 }
