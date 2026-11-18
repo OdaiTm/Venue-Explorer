@@ -29,18 +29,16 @@ struct MapView: View {
             
             PointAnnotation(
                 coordinate: myLocation
-            ).image(PointAnnotation.Image(image: UIImage(systemName: "star")!, name: "mappin.and.ellipse"))
+            ).image(PointAnnotation.Image(image: UIImage(systemName: "figure.wave")!, name: "figure.wave"))
             
-            
-            
-            PointAnnotation(coordinate: thePlaceLocation).image(PointAnnotation.Image(image: UIImage(systemName: "mappin.and.ellipse")!, name: "mappin.and.ellipse"))
+            PointAnnotation(coordinate: thePlaceLocation).image(PointAnnotation.Image(image: UIImage(systemName: "figure.wave")!, name: "figure.wave"))
             
             
             PolylineAnnotation(lineCoordinates: [myLocation ,thePlaceLocation ])
             
         }
             
-            
+             
             
             
             .task {
