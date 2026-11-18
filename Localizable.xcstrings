@@ -75,6 +75,12 @@
         }
       }
     },
+    "lat : %lf" : {
+
+    },
+    "long : %lf" : {
+
+    },
     "placesNavTitle" : {
       "comment" : "places Navigation Title",
       "extractionState" : "manual",

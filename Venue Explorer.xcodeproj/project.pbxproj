@@ -14,6 +14,7 @@
 /* Begin PBXFileReference section */
 		000000000000000000000120 /* Venue Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Venue Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		913A9F3730A5C1B300B1FF3E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		91ECF4A930AD87750032C5CD /* Venue-Explorer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Venue-Explorer-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -37,6 +38,7 @@
 		000000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
+				91ECF4A930AD87750032C5CD /* Venue-Explorer-Info.plist */,
 				913A9F3730A5C1B300B1FF3E /* Localizable.xcstrings */,
 				000000000000000000000010 /* Venue Explorer */,
 				000000000000000000000020 /* Products */,
@@ -275,6 +277,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Venue-Explorer-Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "this app will use your location";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -313,6 +317,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Venue-Explorer-Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "this app will use your location";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

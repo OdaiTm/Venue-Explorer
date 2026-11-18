@@ -11,13 +11,13 @@ import Combine
 
 
 // we extend from the NSObjct cuz the CoreLocation is an Objective C thing
-
-class LocationManager :  NSObject , ObservableObject {
+@Observable
+class LocationManager :  NSObject {
     
     let manager  = CLLocationManager() // first create the Manger
     // create two observed objects for : CLLocation and Auth
-    @Published var location : CLLocation?
-    @Published var authorizationStatus : CLAuthorizationStatus
+ var location : CLLocation?
+var authorizationStatus : CLAuthorizationStatus
     
     
     override init() {

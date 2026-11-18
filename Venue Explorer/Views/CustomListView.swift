@@ -25,6 +25,8 @@ struct CustomListView: View {
      var places     : [Place] = []
       var floors     : [Floor] = []
     var nextList : Int
+    @Environment(LocationManager.self) var locationManager
+
     @State var sortState : SortState = .unsorted
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: []) var favoritesDC : FetchedResults<PlaceDC>
@@ -210,7 +212,7 @@ struct CustomListView: View {
                         place in
                         NavigationLink{
                             
-                            MapView(lat: Double(place.latitude), long: Double(place.longitude) , placeName: place.name)
+                            MapView(lat: Double(place.latitude), long: Double(place.longitude) , placeName: place.name, myLocation: (locationManager.location?.coordinate)!)
                         }
                         label: {
                             LIstViewItem(title: place.name)

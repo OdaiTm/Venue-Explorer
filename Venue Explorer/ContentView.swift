@@ -4,7 +4,7 @@ import Playgrounds
 struct ContentView: View {
     
     @EnvironmentObject var dataFromAPI : APIData
-    
+    @Environment(LocationManager.self) var locationManager
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: []) var favoritesDC : FetchedResults<PlaceDC>
     
@@ -19,6 +19,9 @@ struct ContentView: View {
     
     var body: some View {
        
+        
+        
+        
             TabView{
                 Tab("", systemImage: "location.fill"){
                     NavigationStack{  CustomListView(headLine: head1, venus: dataFromAPI.Venus, nextList: 1)}
