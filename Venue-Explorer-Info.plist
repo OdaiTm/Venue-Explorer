@@ -5,6 +5,6 @@
 	<key>LocationAccuracyAuthorizationDescription</key>
 	<string>LocationAccuracyAuthorizationDescription</string>
 	<key>MBXAccessToken</key>
-	<string></string>
+	<string>YOUR_MAPBOX_TOKEN</string>
 </dict>
 </plist>
